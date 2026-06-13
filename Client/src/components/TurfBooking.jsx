@@ -761,30 +761,6 @@ Thank you for booking with us! See you on the pitch!
                 Strike Turf Ground View
               </div>
             </div>
-
-            {/* Sub-image column */}
-            <div className="md:col-span-4 grid grid-cols-1 gap-4">
-              <div className="group relative overflow-hidden rounded-lg shadow-sm border border-black/5 h-[192px]">
-                <img 
-                  src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=800" 
-                  alt="Football Action Close-up" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 text-white">
-                  <span className="text-xs font-bold uppercase tracking-wider">Fast-paced Play</span>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-lg shadow-sm border border-black/5 h-[192px]">
-                <img 
-                  src="https://images.unsplash.com/photo-1531415080290-b9b8bf7228c7?auto=format&fit=crop&q=80&w=800" 
-                  alt="Cricket Batsman Play" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 text-white">
-                  <span className="text-xs font-bold uppercase tracking-wider">Box Cricket friendly</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
