@@ -1,5 +1,6 @@
 const userModel = require("../models/user.model")
 const jwt = require("jsonwebtoken")
+const bcrypt = require("bcryptjs")
 
 const Register = async (req, res) => {
 
@@ -16,11 +17,12 @@ const Register = async (req, res) => {
         if (exists) {
             return res.status(400).json({ message: "User already exists" })
         }
+        const hash = await bcrypt.hash(password, 10)
         const user = await userModel.create({
             name,
             email,
             phone,
-            password
+            password: hash
         })
 
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: "15d" })
