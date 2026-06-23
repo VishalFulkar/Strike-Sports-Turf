@@ -94,4 +94,22 @@ const Login = async (req, res) => {
 
 }
 
-module.exports = { Register, Login }
+const getProfile = async (req, res) => {
+    try {
+        const user = await userModel.findById(req.user.userId)
+        res.status(200).json({
+            user: {
+                _id: user._id,
+                name: user.name,
+                email: user.email
+            }
+        })
+    } catch (err) {
+        console.log(err)
+        return res.status(500).json({
+            message: err.message,
+        })
+    }
+}
+
+module.exports = { Register, Login, getProfile }
